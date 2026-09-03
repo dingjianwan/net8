@@ -1,0 +1,81 @@
+{
+  "TestMode": "Auto",
+  "SqlServer": "Data Source=192.168.1.247;Initial Catalog=YB_OIMobox;User ID=sa;Password=Am123123;Encrypt=True;TrustServerCertificate=True;",
+  "HostToAgvServerUrl": "http://127.0.0.1:5102/",
+  "HttpUrlPort": "http://+:8001",
+  "TcpPort": "2023",
+  "TcpIp": "192.168.1.136",
+  "WCSIP": "http://localhost:8001/fromWms",
+  "CParea": [ "", "" ],
+  "deviceInfo": [
+    {
+      "address": "192.168.0.5",
+      "deviceName": "1号卷帘门",
+      "deviceNo": [ "1" ],
+      "location": [],
+      "deviceType": 1,
+      "enable": 1,
+      "virtualDoor": [ "1" ]
+    },
+    {
+      "address": "192.168.1.126",
+      "deviceName": "1号瓶坯注塑机",
+      "deviceNo": [],
+      "location": [ "YHZSJ-01", "YHZSJ-02" ],
+      "deviceType": 2,
+      "enable": 1,
+      "virtualDoor": []
+    },
+    {
+      "address": "192.168.1.136",
+      "deviceName": "1号瓶坯翻斗机",
+      "deviceNo": [],
+      "location": [ "YHFDJ-01" ],
+      "deviceType": 3,
+      "enable": 1
+    },
+    {
+      "address": "192.168.1.5",
+      "deviceName": "怡宝成品仓LZ1输送线",
+      "deviceNo": [],
+      "location": [ "YXXXK-01", "YXKT-01", "YHKTW-01", "A01" ],
+      "deviceType": 7,
+      "enable": 1
+    }
+  ],
+  "deviceCacheBits": [
+    {
+      "deviceName": "1号瓶坯注塑机",
+      "fullCacheBits": [ "YHZSJXB-01", "YHZSJXB-02", "YHZSJXB-03" ],
+      "emptyCacheBits": [ "YHKTW-01", "YHKTW-02" ],
+      "stackBits": [ "XXHJ" ]
+    },
+    {
+      "deviceName": "1号瓶盖翻斗机",
+      "fullCacheBits": [ "XXHJ-01" ],
+      "emptyCacheBits": [ "XXHJ-01", "XXHJ-02" ],
+      "stackBits": []
+    }
+  ],
+  "trafficZoneInfo": [
+    {
+      "unit": "1",
+      "lockNo": "1",
+      "door": "1",
+      "taskType": [ "AAA", "BBB" ]
+    },
+    {
+      "unit": "2",
+      "lockNo": "16",
+      "door": "2",
+      "taskType": [ "AAA", "BBB" ]
+    },
+    {
+      "unit": "5",
+      "lockNo": "1",
+      "door": "1",
+      "taskType": [ "AAA", "BBB" ],
+      "camera": "1"
+    }
+  ]
+}
