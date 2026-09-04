@@ -1,4 +1,5 @@
-﻿using WebApplication1.Devices;
+﻿using Dm.util;
+using WebApplication1.Devices;
 
 namespace WebApplication1.Background {
     /// <summary>
@@ -40,9 +41,10 @@ namespace WebApplication1.Background {
             protected override async Task RunWorkLoop(CancellationToken stoppingToken) {
 
                 while (!stoppingToken.IsCancellationRequested) {
-                    _logger.LogDebug("消息消费执行一轮");
-                    _logger.LogInformation("【{TaskName}】后台任务正在执行", TaskName);
-                    LogHelper.Info($"后台任务正在执行", "后台");
+                    //_logger.LogDebug("消息消费执行一轮");
+                    //_logger.LogInformation("【{TaskName}】后台任务正在执行", TaskName);
+                    //LogHelper.Info($"后台任务正在执行", "后台");
+                    //var a=new SqlHelper<object>().GetInstance().Queryable<Location>().First();
                     await Task.Delay(1000, stoppingToken);
                 }
             }

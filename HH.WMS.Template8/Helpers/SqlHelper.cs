@@ -140,9 +140,8 @@ namespace WebApplication1 {
                     var FirstMethodName = db.Ado.SqlStackTrace.FirstMethodName;
                     //db.Ado.SqlStackTrace.MyStackTraceList[1].xxx 获取上层方法的信息
                 }
-                //相当于EF的 PrintToMiniProfiler
             };
-            //据转换 (ExecuteCommand才会拦截，查询不行)
+            //core 版本对增删改查都有效 DataExecuted **只对映射完整实体 T 生效**，Select 投影 new Dto /new {} 匿名对象不会执行这个 AOP，这部分字符串不会自动 Trim
             db.Aop.DataExecuted = (value, entity) =>
             {
                 //只有行级事件
@@ -155,7 +154,6 @@ namespace WebApplication1 {
                     }
                 });
             };
-
             return db;
         }
     }

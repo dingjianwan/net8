@@ -20,7 +20,7 @@ try {
     //初始化配置文件
     ConfigHelper.Init();
     // 批量注册所有后台任务，框架自动并行启动
-    //builder.Services.AddHostedService<MessageConsumeTask>();
+    builder.Services.AddHostedService<MessageConsumeTask>();
     builder.Services.AddHostedService<DataClearTask>();
     builder.Services.AddHostedService<StatReportTask>();
     builder.Services.AddHostedService<ModbusTask>();
