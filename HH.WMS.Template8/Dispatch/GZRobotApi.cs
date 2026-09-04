@@ -9,7 +9,7 @@ namespace WebApplication1 {
     /// <summary>
     /// 国自调度辅助类
     /// </summary>
-    public class GZRobot
+    public class GZRobotApi
     {
         private static readonly HttpHelper apiHelper = new HttpHelper();
         private static readonly string baseUrl = "http://192.168.1.99:2000/";

@@ -9,8 +9,7 @@ namespace WebApplication1.Controllers {
     [Route("api/pei")]
     public class GatewayController : ControllerBase {
         /// <summary>
-        /// 人工配盘接口
-        /// 前端按钮点击调用
+        /// 替换mobox可编程接口
         /// </summary>
         [HttpPost]
         [Route("add")]

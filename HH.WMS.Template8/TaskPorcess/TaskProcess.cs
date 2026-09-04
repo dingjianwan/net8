@@ -128,7 +128,7 @@ namespace WebApplication1 {
                         dic.Add(new param() { name = "dst", value = param2.ToString() });
 
                         LogHelper.Info($"sendtask taskno={mst.S_CODE}");
-                        int order_id = GZRobot.CreateOrder(mst.S_CODE, mst.N_PRIORITY, JsonConvert.SerializeObject(dic), "p2p");
+                        int order_id = GZRobotApi.CreateOrder(mst.S_CODE, mst.N_PRIORITY, JsonConvert.SerializeObject(dic), "p2p");
                         if (order_id != 0) {
                             TaskHelper.UpdateStatus(mst, 1);
                             result = true;

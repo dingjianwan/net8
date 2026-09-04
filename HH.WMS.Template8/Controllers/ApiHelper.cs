@@ -1,4 +1,8 @@
-﻿using SqlSugar;
+﻿using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using SqlSugar;
+using System.Collections.Concurrent;
 using static WebApplication1.ApiModels;
 
 namespace WebApplication1 {
@@ -191,7 +195,13 @@ namespace WebApplication1 {
                 return result;
             }
         }
+        private static ConcurrentDictionary<string, byte> dic = new ConcurrentDictionary<string, byte>();
 
+        /// <summary>
+        /// 国自接口是同步的，要直接返回成功或者失败，不像hosttoagv可以主动改参数（如果是主动去查国自交互表的需要开启轮询GZRobot.QueryInteractInfo）
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         internal static RCSReturnResult SafetyInteraction(SafetyInteractionModel model) {
             RCSReturnResult result = new RCSReturnResult() { code = 0, msg = "success" };
             try {
