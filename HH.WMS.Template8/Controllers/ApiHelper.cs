@@ -9,17 +9,6 @@ namespace WebApplication1 {
     public static class ApiHelper {
         static ApiHelper() {
         }
-        /// <summary>
-        /// 根据固定开头生成单号
-        /// </summary>
-        /// <returns></returns>
-        internal static string GenerateOrderNo(string header) {
-            var date = DateTime.Now.ToString("yyMMdd");
-            var id = SYSHelper.GetSerialNumber(date, header);
-            return $"{header}{date}{id.ToString().PadLeft(4, '0')}";
-        }
-    
-
         #region   HostToAgv接口实现类
         /// <summary>
         /// AGV信号处理
